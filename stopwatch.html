@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <p>Clock Started</p>
+    <p id="demo"></p>
+    <input type="button" onclick="stop()" value="STOP" style="color:red">
+
+    <script>
+        function myTimer(){
+            var d = new Date();
+            var t = d.toLocaleTimeString();
+            document.getElementById("demo").innerHTML = t;
+        }
+        var myVar = setInterval(myTimer, 1000);
+
+        function stop(){
+            clearInterval(myVar);
+        }
+    </script>
+</body>
+</html>
