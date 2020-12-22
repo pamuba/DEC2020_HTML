@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getValues(){
+            var r = document.getElementsByTagName('input');
+            for(let i=0;i<r.length-1;i++){
+                if(r[i].checked)
+                    document.getElementById('result').innerHTML += (r[i].value).toUpperCase()+" ";
+            }
+        }
+    </script>
+</head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+    FRUITS:<br>
+    <input type="radio" name="fruits" value="mango">Mango</input><br> 
+    <input type="radio" name="fruits" value="apple">Apple</input><br>
+    <input type="radio" name="fruits" value="grapes">Grapes</input><br><br>
+
+    DRINKS:<br>
+    <input type="radio" name="drinks" value="coke">Coke</input><br> 
+    <input type="radio" name="drinks" value="pepsi">Pepsi</input><br>
+    <input type="radio" name="drinks" value="gato">Gato</input><br><br>
+
+    <input type="button" value="CLICK" onclick="getValues()"/>
+    <br>
+    <label id="result"></label>
+</body>
+</html>
+

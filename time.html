@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input class="blue" style="text-transform: uppercase;"
+        placeholder="Upper case only" maxlength="6" 
+        minlength="2" type="text"
+        onclick="this.style.backgroundColor='white';">
+       
+        <hr />
+
+        <input type="time" min="09:00" max="18:00" required />
+        <small>Office hours are 9am to 6pm</small>
+
+        <hr />
+
+        <input type="submit"/>
+    </form>
+</body>
+</html>

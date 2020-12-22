@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="font-family:Arial, Helvetica, sans-serif">
+    <p id="p"><b>Choose ur Color</b></p>
+    <div>
+        <input type="color" name="head" id="head" value="#38F107" />
+    </div>
+    <textarea></textarea>
+    <script>
+        var head = document.getElementById("head");
+        var p = document.getElementById('p');
+        head.addEventListener('change', function(){
+            p.style.color = head.value
+        });
+    </script>
+</body>
+</html>
