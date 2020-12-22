@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <script>
+        var fonts = [
+        'Arial',
+        'Arial Black',
+        'Bahnschrift',
+        'Calibri',
+        'Cambria',
+        'Cambria Math',
+        'Candara',
+        'Comic Sans MS',
+        'Consolas',
+        'Constantia',
+        'Corbel',
+        'Courier New',
+        'Ebrima',
+        'Franklin Gothic Medium',
+        'Gabriola',
+        'Gadugi',
+        'Georgia',
+        'HoloLens MDL2 Assets',
+        'Impact',
+        'Ink Free',
+        'Javanese Text',
+        'Leelawadee UI',
+        'Lucida Console',
+        'Lucida Sans Unicode',
+        'Malgun Gothic',
+        'Marlett',
+        'Microsoft Himalaya',
+        'Microsoft JhengHei',
+        'Microsoft New Tai Lue',
+        'Microsoft PhagsPa',
+        'Microsoft Sans Serif',
+        'Microsoft Tai Le',
+        'Microsoft YaHei',
+        'Microsoft Yi Baiti',
+        'MingLiU-ExtB',
+        'Mongolian Baiti',
+        'MS Gothic',
+        'MV Boli',
+        'Myanmar Text',
+        'Nirmala UI',
+        'Palatino Linotype',
+        'Segoe MDL2 Assets',
+        'Segoe Print',
+        'Segoe Script',
+        'Segoe UI',
+        'Segoe UI Historic',
+        'Segoe UI Emoji',
+        'Segoe UI Symbol',
+        'SimSun',
+        'Sitka',
+        'Sylfaen',
+        'Symbol',
+        'Tahoma',
+        'Times New Roman',
+        'Trebuchet MS',
+        'Verdana',
+        'Webdings',
+        'Wingdings',
+        'Yu Gothic',]
+
+
+       
+
+    </script>
+</head>
+<body>
+    <div>
+        <!-- default color set to red -->
+        <input type="color" name="color" id="color" value="#FF0000">
+        <select id="selectFont">
+            <option>Choose a Font</option>
+        </select>
+    
+        <button type="button" onclick="change()">Change Font</button><br/>
+        <hr/>
+        <textarea id="textarea" rows="10" cols="50"></textarea>
+
+    <script>
+        var color= document.getElementById('color');
+        var textarea = document.getElementById('textarea');
+        var font= document.getElementById('selectFont');
+
+        color.addEventListener('change', function (){
+            textarea.style.color = color.value
+        })
+
+
+        function change() {
+            textarea.style.fontFamily = font.value;
+        }
+
+
+        var select = document.getElementById("selectFont");
+        for(var i = 0; i < fonts.length; i++) {
+            var opt = fonts[i];
+            var el = document.createElement("option");
+            el.textContent = opt;
+            el.value = opt;
+            select.appendChild(el);
+        }
+    </script>
+    </div>
+</body>
+</html>
