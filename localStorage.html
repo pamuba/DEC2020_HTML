@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function loadUser(){
+            username = document.getElementById("username");
+            if(localStorage.username)
+            {
+                username.value = localStorage.username;
+            }
+        }
+        function saveUser(){
+            username = document.getElementById("username");
+            // localStorage.setItem("username", username.value);
+            localStorage.username = username.value;
+        }
+        function removeUser(){
+            localStorage.removeItem("username")
+        }
+    </script>
+</head>
+<body style="font-family: Arial;">
+    User Name:<input type="text" id="username" onclick="loadUser()" /><br>
+    Password:<input  type="password" id="password"><br>
+    <input type="button" onclick="saveUser()" value="Login">
+    <input type="button" onclick="removeUser()" value="Reset">
+</body>
+</html>
