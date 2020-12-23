@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas style="border:solid 1px red;" height="500" width="500" id="myCanvas"></canvas>
+    <img src="bib.jpg" alt="">
+    <!-- <script>
+        var image = new Image();
+        image.height = 200;
+        image.width = 200;
+        image.src = 'cat.jpg';
+        image.alt = 'Missing Image'
+        document.body.appendChild(image);
+    </script> -->
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext('2d');
+
+        var image = new Image();
+        // image.height = 200;
+        // image.width = 200;
+        image.src = 'cat.jpg';
+        image.alt = 'Missing Image'
+
+        image.onload = () =>{
+            ctx.drawImage(image, 230,180, 280, 220, 10,10, 400,400)
+        }
+
+    </script>
+</body>
+</html>
