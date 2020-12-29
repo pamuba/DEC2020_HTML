@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color:#fff;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap:10px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .container > div{
+            background-color: #3bbced;
+            padding: 30px;
+        }
+        .container > div:nth-child(even){
+            background-color: #777;
+            padding:30px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+        <div class="nested">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+        </div>
+
+        <div>5</div>
+        <div>6</div>
+        
+    </div>
+</body>
+</html>
