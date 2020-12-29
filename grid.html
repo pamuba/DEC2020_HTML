@@ -5,7 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+        body{
+            color:#fff;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .container{
+            display: grid;
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* grid-template-columns: 30% 50% 20%; */
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .container > div{
+            background-color: #3bbced;
+            padding: 30px;
+        }
+        .container > div:nth-child(even){
+            background-color: #777;
+            padding:30px;
+        }
     </style>
 </head>
 <body>
