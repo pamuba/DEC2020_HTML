@@ -7,49 +7,45 @@
     <style>
         .container{
             display: flex;
-            /* flex-direction: column; */
-            /* flex-direction: column-reverse; */
-            /* flex-direction: row-reverse; */
-            /* flex-wrap:wrap; */
-            /* flex-wrap: wrap-reverse; */
-
-            /* flex-direction+ flex-wrap */
-            flex-flow: row wrap;
+            /* justify-content: flex-start;
+            /* align-items: flex-start; */
+            /* align-items: center; */
+            /*height: 600px; */
+            align-items: stretch;
             background-color: orangered;
         }
         .container > div {
             background-color: gold;
             width:100px;
+            margin: 10px;
             text-align: center;
             line-height: 80px;
+            height: 100px;
             font-size: 30px;
-            margin: 10px;
-            padding:20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+        <div style="order:1;" >1</div>
+        <div style="order:2;">2</div>
+        <div style="order:3;  flex-shrink: 0;">33</div>
+        <div style="order:4;">4</div>
+        <div style="order:1;" >1</div>
+        <div style="order:2; ">2</div>
+        <div style="order:3; ">3</div>
+        <div style="order:4; ">4</div>
+        <div style="order:1; ">1</div>
+        <div style="order:2; ">2</div>
+        <div style="order:3; ">3</div>
+        <div style="order:4; ">4</div>
+        <div style="order:1; ">1</div>
+        <div style="order:2; ">2</div>
+        <div style="order:3; ">3</div>
+        <div style="order:4; ">4</div>
+        <div style="order:1; ">1</div>
+        <div style="order:2; ">2</div>
+       
     </div>
 </body>
 </html>
