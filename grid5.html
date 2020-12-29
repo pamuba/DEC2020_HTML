@@ -12,7 +12,8 @@
         }
         .container{
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(4, minmax(150px, auto));
             grid-gap:10px;
             max-width: 960px;
             margin: 0 auto;
@@ -25,35 +26,17 @@
             background-color: #777;
             padding:30px;
         }
-        .nested{
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 10px;
-        }
-        .nested p{
-            border:1px solid #fff;
-            padding:20px;
-            margin:0;
-        }
-       
+      
     </style>
 </head>
 <body>
     <div class="container">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-
-        <div class="nested">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-        </div>
-
-        <div>5</div>
-        <div>6</div>
-        
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
     </div>
 </body>
 </html>
