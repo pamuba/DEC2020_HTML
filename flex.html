@@ -5,14 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container{
+         .container{
             display: flex;
             /* justify-content: flex-start;
             /* align-items: flex-start; */
             /* align-items: center; */
-            /*height: 600px; */
-            align-items: stretch;
-            background-color: orangered;
+            height: 200px;
+            /* align-items: stretch; */
+            background-color:hotpink;
+        }
+        @media all and (max-width:800px){
+            .container{
+            display: flex;
+            /* justify-content: flex-start;
+            /* align-items: flex-start; */
+            /* align-items: center; */
+            height: 200px;
+            /* align-items: stretch; */
+            background-color: rgb(216, 209, 206);
+        }
         }
         .container > div {
             background-color: gold;
@@ -20,14 +31,19 @@
             margin: 10px;
             text-align: center;
             line-height: 80px;
-            height: 100px;
             font-size: 30px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div style="order:1;" >1</div>
+
+        <div>1</div>
+        <div style="align-self: flex-start;">2</div>
+        <div style="align-self: flex-end;">3</div>
+        <div>4</div>
+
+        <!-- <div style="order:1;" >1</div>
         <div style="order:2;">2</div>
         <div style="order:3;  flex-shrink: 0;">33</div>
         <div style="order:4;">4</div>
@@ -44,7 +60,7 @@
         <div style="order:3; ">3</div>
         <div style="order:4; ">4</div>
         <div style="order:1; ">1</div>
-        <div style="order:2; ">2</div>
+        <div style="order:2; ">2</div> -->
        
     </div>
 </body>
