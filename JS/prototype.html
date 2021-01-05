@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dragon = {
+            name:"Tanya",
+            fire:true,
+            fight(){
+                return 5;
+            },
+            sing(){
+                if(this.fire)
+                    return `I am ${this.name}, the breather of fire`
+            }
+        }
+
+        let lizard = {
+            name:'Kiki',
+            // fire:true,
+            fight(){
+                return 1;
+            }
+        }
+        //we can borrow the sing function for lizard using bind
+        // const singLizard = dragon.sing.bind(lizard);
+        // console.log(singLizard());
+
+
+        //Prototypal inheritance
+        //I want to tell the lizard should inherit all properties
+        // and methods of the above object
+        // lizard.__proto__ = dragon;
+        // console.log(lizard.sing())
+        // //wht abt fire property
+        // console.log(lizard.fire)
+        // //wht abt fight()
+        // console.log(lizard.fight())
+
+        console.log(dragon.__proto__)
+        // console.log(dragon.isPrototypeOf(lizard))
+        // console.log(lizard.isPrototypeOf(dragon))
+
+        console.log(dragon instanceof new lizard() )
+        console.log(lizard instanceof new dragon() )
+
+        //They do not have association
+        //proto is an object
+        //Both objects are not assigned to each other
+    </script>
+</body>
+</html>
+
+
