@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JS Prompt</h2>
+    <button onclick="myFunction()">Enter Name</button>
+    <p id="demo"></p>
+    <script>
+        var txt;
+        function myFunction(){
+            let person = prompt("Please enter your name:", "John");
+            if(person == null || person == "")
+                {txt = "User cancelled the prompt"}
+            else
+                {txt = "Hello "+person+"! How ru today?"}
+            
+            document.getElementById("demo").innerHTML = txt;
+        }
+        
+    </script>
+</body>
+</html>
