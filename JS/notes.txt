@@ -28,3 +28,9 @@ Array.from()
 ** A function can return another function. A function which is 
 assigned to a variable is called a function expression.
 
+
+Arrow fns charactersitics:
+1. do not have this
+2. do not have arguments
+3. cant be called with new
+4. do not have super
