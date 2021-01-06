@@ -20,3 +20,11 @@ bind VS call
 3. call does not make a copy of the function being called
 
 ** arrow funs do not have "arguments"
+
+Q. copy of the array, without spread
+push every element of a source arry to a new array?  
+Array.from()
+
+** A function can return another function. A function which is 
+assigned to a variable is called a function expression.
+
