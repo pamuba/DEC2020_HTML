@@ -1,6 +1,7 @@
 9:09 PM 1/6/2021
 
 1. Number.MAX_SAFE_INTEGER Vs Number.MAX_VALUE
+2. promise VS callbacks
 
 this: points to the object that invokes the function containing the this keyword.
 
