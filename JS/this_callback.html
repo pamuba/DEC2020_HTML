@@ -20,7 +20,8 @@
     </script>
     <script>
         $(document).ready(function(){
-            $("button").click(usr.clickHandler);
+            // $("button").click(usr.clickHandler);
+            $("button").click(usr.clickHandler.bind(usr));
         })
     </script>
 </head>
