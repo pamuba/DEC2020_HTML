@@ -1,0 +1,22 @@
+9:09 PM 1/6/2021
+
+1. Number.MAX_SAFE_INTEGER Vs Number.MAX_VALUE
+
+this: points to the object that invokes the function containing the this keyword.
+
+
+can you tell what's the diff between apply and call?
+
+apply expects all parameters to be passed individaully 
+but call expects the second parameter to be an array
+
+Bind: The bind() method creates a new function that, when called, has its this keyword set to the provided object.
+
+call: call() calls a function with a given this value and arguments provided individually.
+
+bind VS call
+1. call accepts additional parameters 
+2. call executes the function right away
+3. call does not make a copy of the function being called
+
+** arrow funs do not have "arguments"
