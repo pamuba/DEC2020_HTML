@@ -5,9 +5,10 @@ var usr = {
         {name:"Jill", age:25}
     ],
     clickHandler:function(){
+       var that = this
        this.data.forEach(function(person){
-        console.log("this referring to:"+this);
-        console.log(person.name + " works for the department " + this.department)
+        console.log("this referring to:"+JSON.stringify(that));
+        console.log(person.name + " works for the department " + that.department)
        })
     }
 }
