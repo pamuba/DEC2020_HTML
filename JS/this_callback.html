@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script>
+        var usr = {
+            data : [
+                {name:"John Wick", age:22},
+                {name:"Jill", age:25}
+            ],
+            clickHandler:function(event){
+                var randomIndex = ((Math.random() * 2 | 0 ) + 1 ) - 1;
+                console.log(this.data[randomIndex].name + " " + this.data[randomIndex].age)
+            }
+        }
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(usr.clickHandler);
+        })
+    </script>
+</head>
+<body>
+    <button>Click</button>
+</body>
+</html>

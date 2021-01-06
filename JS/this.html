@@ -16,7 +16,23 @@
             console.log(this.firstName+ " " + this.lastName)
         }
     }
-    person.showFullName();
+
+    var diffPerson = {
+        firstName : "Peter",
+        lastName : "Smith",
+    }
+
+    person.showFullName.apply(diffPerson)
+    // person.showFullName();
+
+
+    // var firstName = "John",  lastName = "Wick";
+    // showFullName = function(){
+    //      console.log(this.firstName+ " " + this.lastName);
+    // }
+    // showFullName(); //this points to global object
+
+
     </script>
 </body>
 </html>
