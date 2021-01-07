@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const promise = new Promise((resolve, reject)=>{
+            const request = new XMLHttpRequest();
+            request.open('GET', "http://dummy.restapiexample.com/api/v1/employees");
+            request.onload = () => {
+                if(request.status === 200 && request.readyState === 4){
+                    resolve(request.response)
+                }
+                else{
+                    reject(new Error(request.statusText))
+                }
+            };
+            request.onerror = () =>{
+                reject(new Error('Error fetching data'));
+            }
+            request.send();
+        });
+        promise.then((data)=>{
+            console.log("Got the data!!! Promise fulfilled");
+            document.body.textContent = JSON.parse(data).data[0]["employee_name"]
+        }, (error)=>{
+            console.log("Promise Rejected");
+            console.log(error.message);
+        });
+
+    </script>
+</body>
+</html>

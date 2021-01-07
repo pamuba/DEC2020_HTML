@@ -86,3 +86,18 @@ async function add(){
 DESRUCTURING:
 Unpacking like spread...Objects/Arrays
 widely used in react
+
+
+
+AJAX:
+
+XMLHttpRequest Object
+open()
+async send()
+abort()
+getResponseHeader()
+
+readyState : 0 request is not initialized .... 4 response is ready
+responseXML/Text
+status : 200 OK
+

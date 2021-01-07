@@ -13,5 +13,10 @@
 
 // console.log(JSON.stringify(usr))
 
-let [name1, name2, ...rest] = ["Hi", "how", "are", "you", "today"]
-console.log(name1, name2, rest[0], rest[1])
+// let [name1, name2, ...rest] = ["Hi", "how", "are", "you", "today"]
+// console.log(name1, name2, rest[0], rest[1])
+
+let n = "hii"
+let m = "Hello"
+//swap the values of m,n in one line
+[n, m] = [m, n];
