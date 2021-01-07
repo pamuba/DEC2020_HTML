@@ -35,3 +35,49 @@ Arrow fns charactersitics:
 2. do not have arguments
 3. cant be called with new
 4. do not have super
+
+
+Q.what is a symbol in Javascript?
+Q.function(data){} should determine whether data is string or not
+
+function check(data) {
+    return typeof data === 'string' || data instanceof String;
+}
+
+function isString(data) {
+    if (typeof data == "string") {
+        console.log(true);
+    }
+    else {
+        console.log(false);
+    }
+}
+
+
+function(data){
+    if(Object.prototype.toString.call(data) === '[]object String')
+}
+
+function isString(data) {
+    if(typeof data == "string")
+        console.log(true);
+
+    else
+        console.log(false);
+}       
+
+ASYNC
+
+1. always returns a promise
+2. await
+3. to work with promise in an easier way
+4. do something async in a sync way
+
+async function add(){
+
+    await ......
+    await ......
+
+}
+////////////////
+//////////////
