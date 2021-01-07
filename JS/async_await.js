@@ -28,17 +28,17 @@ function c(){
     return new Promise(resolve=>{
         setTimeout(()=>{
             resolve('Third');
-        }, 3000)
+        }, 100)
     });
 }
 
 async function msg(){
-    const aa = a().then((r)=>r);
-    const bb = b().then((r)=>r);
+    a().then(function(r){console.log(r)});
+    b().then((r)=> console.log(r));
     const cc = await c();
 
-    console.log(`${aa}`)
-    console.log(`${bb}`)
+    
+    
     console.log(`${cc}`)
 }
 
