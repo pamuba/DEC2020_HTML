@@ -81,3 +81,8 @@ async function add(){
 }
 ////////////////
 //////////////
+
+
+DESRUCTURING:
+Unpacking like spread...Objects/Arrays
+widely used in react
