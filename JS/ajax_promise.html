@@ -25,6 +25,7 @@
         });
         promise.then((data)=>{
             console.log("Got the data!!! Promise fulfilled");
+            console.log(data)
             document.body.textContent = JSON.parse(data).data[0]["employee_name"]
         }, (error)=>{
             console.log("Promise Rejected");
