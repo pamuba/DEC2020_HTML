@@ -1,0 +1,15 @@
+npm init -y
+
+npm i @babel/core @babel/cli
+
+recreate node_modules
+npm i
+
+npm install --save-dev @babel/plugin-transform-arrow-functions
+
+npm run build
+
+
+npm uninstall @babel/plugin-transform-arrow-functions
+
+https://www.toptal.com/developers/gitignore
