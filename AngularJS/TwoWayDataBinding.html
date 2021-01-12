@@ -6,10 +6,39 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
     <script src="script1.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse:collapse;
+        }
+    </style>
 </head>
-<body ng-controller="Ctrl">
-    <input type="text" ng-model="message">
+<body style="font-family:'Verdana">
+    <!-- <input type="text" ng-model="msg">
     <br>
     {{message}}
+    {{ msg }}
+    <br>
+    <br> -->
+    <div ng-controller="EmpCtrl">
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Dept</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="emp in employees">
+                    <td>{{emp.firstName}}</td>
+                    <td>{{emp.lastName}}</td>
+                    <td>{{emp.dept}}</td>
+                    <td>{{emp.salary}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
