@@ -1,13 +1,27 @@
-var myApp = angular.module("myModule", []);
+// var myApp = angular.module("myModule", []);
 
-// var myController = function($scope){
+// // var myController = function($scope){
+// //     $scope.message = "Test Message"
+// // }
+
+// myApp.controller("myController", function($scope){
 //     $scope.message = "Test Message"
-// }
+// });
 
-myApp.controller("myController", function($scope){
+angular
+.module("myModule", [])
+.controller("myController", function($scope){
     $scope.message = "Test Message"
-});
-
-myApp.controller("myController1", function($scope){
+})
+.controller("myController1", function($scope){
     $scope.message = "Test Message2"
-});
+})
+.controller("empController", function($scope){
+    var employee = {
+        firstName:"John",
+        lastName:"Wick",
+        dept:"Sales",
+        img:"/AngularJS/Images/cat.jpg"
+    };
+    $scope.emp = employee;
+})

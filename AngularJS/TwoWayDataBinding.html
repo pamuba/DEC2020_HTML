@@ -5,18 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
-    <script src="script.js"></script>
+    <script src="script1.js"></script>
 </head>
-<body ng-controller="empController">
-    <div>
-        First name:{{ emp.firstName }}
-    </div>
-    <div>
-        Last name:{{ emp.lastName }}
-    </div>
-    <div>
-        Dept name:{{ emp.dept }}
-    </div>
-    <img ng-src="{{ emp.img }}" alt="">
+<body ng-controller="Ctrl">
+    <input type="text" ng-model="message">
+    <br>
+    {{message}}
 </body>
 </html>
