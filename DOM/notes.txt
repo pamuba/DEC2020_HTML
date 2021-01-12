@@ -5,3 +5,13 @@ children
 classList
 innerHTML
 innerText
+nodeName 
+*NodeType
+nodeValue
+textContent
+setAttribute
+setAttributeNode
+removeChild()
+replaceChild()
+
+mouseenter mouseout

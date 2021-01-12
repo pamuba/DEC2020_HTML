@@ -7,6 +7,9 @@
     <script>
         function apply(){
             document.getElementById("div").innerHTML = "<b>HIIIII!!!</b>"
+            document.getElementById("ul").lastChild.innerHTML = "****"
+            alert(document.getElementById("ul").lastChild.innerHTML);
+            // document.getElementById("ul").lastElementChild.innerHTML = "cat"
         }
     </script>
 </head>
@@ -14,11 +17,13 @@
     <div onclick="apply()" id="div">
         Lorem ipsum dolor sit.
     </div>
-    <ul>
+    <ul id="ul">
         <li>Lorem, ipsum.</li>
         <li>Lorem, ipsum.</li>
         <li>Lorem, ipsum.</li>
-        <li>Lorem, ipsum.</li>
-    </ul>
+        <li>Lorem,ipsum.</li></ul>
+        <br>
+        <input type="text">
+   
 </body>
 </html>

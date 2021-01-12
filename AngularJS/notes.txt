@@ -1,0 +1,16 @@
+framework Vs Library
+
+1. Dependency Injection
+2. 2 way data binding
+3. testing
+4. MVC
+5. Directives, Filters, ............
+
+if I have Angular CLI: 10.1.7 do I need to download this?
+
+Angular 9
+Angular 7
+
+module: container for different parts of ur application, controllers, services, directives...
+
+controller:js function->builds a model for the view to display, contains the bussiness logic
