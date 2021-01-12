@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
-    <script src="script1.js"></script>
+    <script src="script3.js"></script>
     <style>
         table, th, td {
             border: 1px solid black;
@@ -14,28 +14,25 @@
     </style>
 </head>
 <body style="font-family:'Verdana">
-    <!-- <input type="text" ng-model="msg">
-    <br>
-    {{message}}
-    {{ msg }}
-    <br>
-    <br> -->
-    <div ng-controller="EmpCtrl">
+    <div ng-controller="Ctrl">
         <table>
             <thead>
                 <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Dept</th>
-                    <th>Salary</th>
+                    <th>Name</th>
+                    <th>Likes</th>
+                    <th>Dislikes</th>
+                    <th>Likes/Dislikes</th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="emp in employees">
-                    <td>{{emp.firstName}}</td>
-                    <td>{{emp.lastName}}</td>
-                    <td>{{emp.dept}}</td>
-                    <td>{{emp.salary}}</td>
+                <tr ng-repeat="tech in technologies">
+                    <td>{{tech.name}}</td>
+                    <td>{{tech.likes}}</td>
+                    <td>{{tech.dislikes}}</td>
+                    <td>
+                        <input type="button" value="Like" ng-click="incrementLikes(tech)">
+                        <input type="button" value="Dislike" ng-click="incrementDislikes(tech)">
+                    </td>
                 </tr>
             </tbody>
         </table>

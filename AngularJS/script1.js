@@ -26,6 +26,6 @@ angular
            {name:"Delhi"}
        ]},
    ]
-
+   $scope.countries = countries;
    $scope.employees = employees;
 })
