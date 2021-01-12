@@ -1,0 +1,7 @@
+blur()
+childElementCount
+childNodes
+children
+classList
+innerHTML
+innerText
