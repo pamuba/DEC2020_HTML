@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cls{
+            color:red;
+        }
+    </style>
+    <script>
+        function apply(){
+            var h1 = document.getElementsByTagName('h1')[0];
+            var cl = document.createAttribute("class");
+            cl.value = "cls";
+            h1.attributes.setNamedItem(cl);
+        }
+    </script>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button onclick="apply()">Set Class</button>
+</body>
+</html>
