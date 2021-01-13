@@ -1,0 +1,3 @@
+$("#ul li:eq(0)").after('<li>New</li>')
+
+$("ul li:first").append("<li>Another Drink</li>");
