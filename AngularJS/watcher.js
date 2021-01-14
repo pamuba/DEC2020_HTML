@@ -31,20 +31,41 @@ app.controller('emp', ['$scope', function($scope){
             
     // })
 
-    $scope.o = {
-        a:1,
-        b:2,
-        c:3
-    }
+    // $scope.o = {
+    //     a:1,
+    //     b:2,
+    //     c:3
+    // }
 
-    // $scope.$watch("o", function(newValue, oldValue){
+    // // $scope.$watch("o", function(newValue, oldValue){
+    // //     if(newValue != oldValue){
+    // //         $scope.o.c = $scope.o.a * $scope.o.b;   
+    // //     }
+    // // }, true)
+    // $scope.$watchGroup(['o.a', 'o.b'], function(newValue, oldValue){
     //     if(newValue != oldValue){
     //         $scope.o.c = $scope.o.a * $scope.o.b;   
     //     }
-    // }, true)
-    $scope.$watchGroup(['o.a', 'o.b'], function(newValue, oldValue){
-        if(newValue != oldValue){
-            $scope.o.c = $scope.o.a * $scope.o.b;   
-        }
-    })
+    // })
+
+    $scope.emps = [
+        {empno:"1", ename:"john"},
+        {empno:"2", ename:"Bill"},
+        {empno:"3", ename:"Kill"},
+        {empno:"4", ename:"Sam"},
+    ]
+    $scope.addEmp = function(){
+        var no = $scope.emps.length + 1;
+        var na = "Name"+no;
+        $scope.emps.push({empno:no, ename:na})
+    }
+    $scope.modify3rd = function(){
+        $scope.emps[2].ename = "Mill";
+    }
+    // $scope.$watchCollection('emps', function(newVal, oldVal){
+    //     console.log("No. of Employees"+$scope.emps.length);
+    // })
+    $scope.$watch('emps', function(newVal, oldVal){
+        console.log("No. of Employees"+$scope.emps.length);
+    }, true)
 }]);
