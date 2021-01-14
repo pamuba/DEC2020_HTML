@@ -14,3 +14,12 @@ Angular 7
 module: container for different parts of ur application, controllers, services, directives...
 
 controller:js function->builds a model for the view to display, contains the bussiness logic
+
+
+watchlist = list 
+
+every $scope/controller is going to have its own watch list
+
+$rootScope - entire application, 
+
+Digest Process = detects the changes and updates the UI in cycles
