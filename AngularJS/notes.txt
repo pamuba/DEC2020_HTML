@@ -96,3 +96,15 @@ count the no of chars
 $watch
 
 what are directives in Angular.
+
+1. Goes to the location(url)
+2. Gets the new content
+3. Injects in the current page
+
+ng-view
+
+client side routing
+
+1. ngRoute
+2. UI-Router
+3. others

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- <script src="https://code.jquery.com/jquery-2.1.4.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="routing.js"></script>
+
+</head>
+<body ng-app="app">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 well">
+                Header
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 well" style="height: 100%;">
+                <ul>
+                    <li><a href="#!first-msg">First</a></li>
+                    <li><a href="#!second-msg">Second</a></li>
+                    <li><a href="#!third-msg">Third</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-9 well" style="height: 100%;">
+                <div ng-view>
+                </div>
+            </div>
+        </div>
+        <!-- The main App
+        <br>
+        <a href="#!first-msg">First</a><br>
+        <a href="#!second-msg">Second</a>
+        <div ng-view>
+    
+        </div> -->
+    </div>
+</body>
+</html>
