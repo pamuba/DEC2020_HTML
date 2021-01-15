@@ -94,3 +94,5 @@ textbox
 count the no of chars
 
 $watch
+
+what are directives in Angular.
