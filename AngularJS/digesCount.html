@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="appl_digest.js"></script>
+    <script>
+        var app = angular.module('watchApp', [])
+        app.controller('watchCtrl', function($scope){
+            $scope.count = -1;
+            $scope.$watch('txtval', function(newV, oldV){
+                $scope.count = $scope.count + 1;
+            })
+        })
+    </script>
+</head>
+<body>
+    <div ng-app="watchApp" ng-controller="watchCtrl">
+        Enter Data:<input type="text" ng-model='txtval'>
+        <br>
+        <span>No. chars/times $watch fired:{{count}}</span>
+    </div>
+</body>
+</html>

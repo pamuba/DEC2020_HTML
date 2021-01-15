@@ -89,3 +89,8 @@ mainApp.controller('StudentController', function($scope) {
 
 
 
+textbox
+
+count the no of chars
+
+$watch

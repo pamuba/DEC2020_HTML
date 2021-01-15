@@ -23,7 +23,7 @@ app.directive('message', function(){
         controller: function($scope, $element, $attrs){
             $scope.btnClick = function(){
                 $scope.o.r = $scope.o.v * $scope.o.v;
-                
+                $scope.$apply();
             }
         }
     }
