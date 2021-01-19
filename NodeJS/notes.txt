@@ -1,1 +1,9 @@
 i/o operation.
+
+ExpressJS: minimal, flexible NodeJS web applicaion framework/mobile
+
+MExpress A N
+MExpress RN 
+
+requests
+GET-app.get('route',cb)
