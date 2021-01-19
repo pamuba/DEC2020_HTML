@@ -1,0 +1,11 @@
+[
+    {"name":"Neptune", "distance":30.087, "light":"4 hours"},
+    {"name":"Uranus", "distance":19.208, "light":"2 hours 40 minutes"},
+    {"name":"Saturn", "distance":9.523, "light":"1 hour 20 minutes"}, 
+    {"name":"Jupiter", "distance":5.203, "light":"43 minutes"}, 
+    {"name":"Mars", "distance":1.524, "light":"12.6 minutes"}, 
+    {"name":"Earth", "distance":1.0, "light":"0"}, 
+    {"name":"Venus", "distance":0.723, "light":"6 minutes"}, 
+    {"name":"Mercury", "distance":0.387, "light":"3 minutes"}, 
+    {"name":"Moon", "distance":0.003, "light":"1.5sec"}
+  ]

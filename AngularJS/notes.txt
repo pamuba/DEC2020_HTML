@@ -108,3 +108,19 @@ client side routing
 1. ngRoute
 2. UI-Router
 3. others
+
+$http
+get
+post
+put
+put
+jsonp
+delete
+
+.config
+.data
+.headers
+.status
+.statusText
+
+get post mthods in HTTP

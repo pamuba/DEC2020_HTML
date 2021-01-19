@@ -1,0 +1,29 @@
+<html>
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+  
+  <body>
+    <div ng-app="myApp" ng-controller="planetController"> 
+      <div>
+          Status: {{st}}
+      </div>
+      <ul>
+        [name], [earth-sun=1], [light speed]
+        <li ng-repeat="x in names">
+          {{ x.name + ', ' + x.distance + ', ' + x.light }}
+        </li>
+      </ul>
+    </div>
+  
+    <script>
+  
+    var app = angular.module('myApp', []);
+    app.controller('planetController', function($scope, $http) {
+      $http.get("planet2.json").then(function(response) 
+      {$scope.names = response.data; $scope.st = response.statusText});
+    });
+    </script>
+  
+  </body>
+  </html>
