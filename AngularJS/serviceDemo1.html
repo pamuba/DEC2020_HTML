@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="serviceDemo.js"></script>
+</head>
+<body ng-app="app">
+    <div ng-controller="emp">
+        <div>
+            Value of a is {{a}},
+            but you change to 
+            <input type="text" ng-model="a" />
+            <br>
+            Value of a is {{b}},
+            but you change to 
+            <input type="text" ng-model="b" />
+        </div>
+        Sum = {{sum}} <br>
+        <button ng-click="doSum()">Calculate</button>
+    </div>
+</body>
+</html>
