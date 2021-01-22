@@ -1,0 +1,18 @@
+32bit=512MB
+64bit=1GB
+
+can be bumped up
+
+32->1GB
+64->1.7GB
+
+
+fs-different thread
+
+scalable
+for child workers
+
+Error VS Exception
+
+
+dbs=>Collections=>Documents
