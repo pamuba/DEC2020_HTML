@@ -1,27 +1,18 @@
 var express = require('express')
+var mongojs = require('mongojs')
 var app = express()
+
+var db = mongojs('contactlist', ['contactlist']);
 
 app.get('/contactlist', function(req, res){
     console.log("Received GET request");
 
-    person1 = {
-        name:"John",
-        email:"john@gmail.com",
-        number:"(111) 111-111"
-    };
-    person2 = {
-        name:"Tom",
-        email:"tom@gmail.com",
-        number:"(222) 222-222"
-    };
-    person3 = {
-        name:"Mary",
-        email:"mary@gmail.com",
-        number:"(333) 333-333"
-    };
-
-    var contactlist = [person1, person2, person3]
-    res.json(contactlist)
+    db.contactlist.find(function(err, docs){
+        console.log(docs)
+        res.json(docs)
+    })
+ 
+    
 });
 
 app.use(express.static(__dirname+'/public'));
