@@ -4,8 +4,11 @@ function AppCtrl($scope, $http){
     $http.get('/contactlist').success(function(response){
         console.log("got the data from the server");
         $scope.contactlist = response;
-    })
+    });
 
-    
+    $scope.addContact = function(){
+        console.log($scope.contact);
+        $http.post('/contactlist', $scope.contact);
+    }
     
 }

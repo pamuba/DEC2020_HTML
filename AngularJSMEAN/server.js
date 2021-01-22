@@ -1,6 +1,8 @@
 var express = require('express')
 var mongojs = require('mongojs')
+var bodyParser = require('body-parser')
 var app = express()
+app.use(bodyParser.json())
 
 var db = mongojs('contactlist', ['contactlist']);
 
@@ -14,6 +16,10 @@ app.get('/contactlist', function(req, res){
  
     
 });
+
+app.post('/contactlist', function(req, res){
+    console.log(req.body);
+})
 
 app.use(express.static(__dirname+'/public'));
 
