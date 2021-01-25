@@ -10,19 +10,26 @@
 </head>
 <body>
     <div ng-controller="emp">
+        a = <input ng-model="a" />
+        <br> 
+        a = {{a}}
+        b = <input ng-model="b" /> 
+        <br>
+        b = {{b}}
+        c = {{c}}
         <!-- a = <input ng-model="o.a" />
-        <br> -->
-        <!-- a = {{a}} -->
-        <!-- b = <input ng-model="o.b" /> -->
-        <!-- <br> -->
-        <!-- b = {{b}} -->
-        <!-- c = {{o.c}} -->
+        <br> 
+        a = {{a}}
+        b = <input ng-model="o.b" /> 
+        <br>
+        b = {{b}}
+        c = {{o.c}} -->
 
-        <div ng-repeat="e in emps">
+        <!-- <div ng-repeat="e in emps">
             <div>{{e.empno}} - {{e.ename}}</div>
         </div>
         <button ng-click="addEmp()">add</button>
-        <button ng-click="modify3rd()">modify 3rd</button>
+        <button ng-click="modify3rd()">modify 3rd</button> -->
     </div>
 </body>
 </html>

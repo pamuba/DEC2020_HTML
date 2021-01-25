@@ -21,7 +21,7 @@ angular
         firstName:"John",
         lastName:"Wick",
         dept:"Sales",
-        img:"/AngularJS/Images/cat.jpg"
+        img:"/Images/cat.jpg"
     };
     $scope.emp = employee;
 })
