@@ -1,0 +1,27 @@
+{
+  "name": "jestDemos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "jest":{
+    "collectCoverage":true,
+    "coverageReporters":[
+      "html"
+    ],
+    "reporters":[
+      "default", 
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle":"Test Report"
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

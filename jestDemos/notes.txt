@@ -1,0 +1,9 @@
+jasmine = e2e
+
+jest = react 
+zero configuration
+fast
+built in code coverage - % of code covered in testing
+isolated/sanboxed tests
+mocking support
+support for react snapshot testing

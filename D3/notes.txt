@@ -1,0 +1,13 @@
+M -> MoveTo
+L -> LineTo
+Z -> close the path
+
+bezier curve
+
+5 tallest
+meters;
+
+500
+
+
+3500

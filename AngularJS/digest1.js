@@ -13,11 +13,11 @@ app.controller('emp', ['$scope', '$rootScope', function($scope, $rootScope){
 var btnClick = function(){
     var $scope = angular.element($('#div1')).scope();
 
-    // $scope.s =  Number($scope.a) + Number($scope.b);
-    // //Invoking the digest process from outside the angular context
-    // $scope.$apply();
+    $scope.s =  Number($scope.a) + Number($scope.b);
+    //Invoking the digest process from outside the angular context
+    $scope.$apply();
     
-    $scope.$apply(function(){
-        $scope.s = Number($scope.a) + Number($scope.b);
-    });
+    // $scope.$apply(function(){
+    //     $scope.s = Number($scope.a) + Number($scope.b);
+    // });
 }
