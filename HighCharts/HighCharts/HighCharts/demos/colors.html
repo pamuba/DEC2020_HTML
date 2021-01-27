@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+  </head>
+  <body>
+    <div
+      id="container"
+      style="min-width: 400px; height: 400px; margin: 0 auto;"
+    ></div>
+
+    <script>
+      $(function () {
+        Highcharts.setOptions({
+          colors: [
+            "#50B432",
+            "#ED561B",
+            "#DDDF00",
+            "#24CBE5",
+            "#64E572",
+            "#FF9655",
+            "#FFF263",
+            "#6AF9C4",
+          ],
+        });
+        var chart;
+
+        $(document).ready(function () {
+          chart = new Highcharts.Chart({
+            chart: {
+              renderTo: "container",
+
+            //   plotBackgroundColor: null,
+
+            //   plotBorderWidth: null,
+
+            //   plotShadow: false,
+            },
+
+            title: {
+              text: "Browser market shares at a specific website, 2010",
+            },
+
+            tooltip: {
+              formatter: function () {
+                return (
+                  "<b>" + this.point.name + "</b>: " + this.percentage + " %"
+                );
+              },
+            },
+
+            plotOptions: {
+              pie: {
+                allowPointSelect: true,
+
+                cursor: "pointer",
+
+                dataLabels: {
+                  enabled: true,
+
+                  color: "#000000",
+
+                  connectorColor: "#000000",
+
+                  formatter: function () {
+                    return (
+                      "<b>" +
+                      this.point.name +
+                      "</b>: " +
+                      this.percentage +
+                      " %"
+                    );
+                  },
+                },
+              },
+            },
+
+            series: [
+              {
+                type: "pie",
+
+                name: "Browser share",
+
+                data: [
+                  ["Firefox", 45.0],
+
+                  ["IE", 26.8],
+
+                  {
+                    name: "Chrome",
+
+                    y: 12.8,
+
+                    sliced: true,
+
+                    selected: true,
+                  },
+
+                  ["Safari", 8.5],
+
+                  ["Opera", 6.2],
+
+                  ["Others", 0.7],
+                ],
+              },
+            ],
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

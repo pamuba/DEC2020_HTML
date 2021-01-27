@@ -1,7 +1,10 @@
 var express = require('express')
 var mongojs = require('mongojs')
 var bodyParser = require('body-parser')
+
 var app = express()
+
+//middlewares, req---res
 app.use(bodyParser.json())
 
 var db = mongojs('contactlist', ['contactlist']);
@@ -20,6 +23,7 @@ app.get('/contactlist', function(req, res){
 app.post('/contactlist', function(req, res){
     console.log(req.body);
     db.contactlist.insert(req.body, function(err, doc){
+        console.log(doc)
         res.json(doc);
     })
 });
@@ -53,6 +57,7 @@ app.put('/contactlist/:id', function(req, res){
 })
 
 app.use(express.static(__dirname+'/public'));
+
 
 app.listen(3000);
 console.log("Server running in port 3000");

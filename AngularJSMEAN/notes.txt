@@ -1,0 +1,11 @@
+package.json:
+keeps track og all the packegs I install in a nodeJS project
+
+node package manager
+
+
+npm init -y
+
+npm i body-parser express(final dist)
+
+npm i -D nodemon(dev)
