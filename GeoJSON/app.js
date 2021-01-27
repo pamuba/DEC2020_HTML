@@ -55,5 +55,31 @@ d3.json('us.json').then(function(us_data){
         })
         .attr('stroke',  '#fff')
         .attr('stroke-width', 1);
+
+        draw_cities();
  });
 });
+
+function draw_cities(){
+    d3.json('us-cities.json').then(function(city_data){
+        svg.selectAll("circle")
+        .data(city_data)
+        .enter()
+        .append("circle")
+        .style("fill", '#9D497A')
+        .style("opacity", 0.8)
+        .attr('cx', function(d){
+            return projection([d.lon, d.lat])[0];
+        })
+        .attr('cy', function(d){
+            return projection([d.lon, d.lat])[1];
+        })
+        .attr('r', function(d){
+            return Math.sqrt(parseInt(d.population)*0.00005)
+        })
+        .append('title')
+        .text(function(d){
+            return d.city;
+        })
+    })
+}
