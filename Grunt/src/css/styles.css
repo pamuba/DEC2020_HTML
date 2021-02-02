@@ -1,0 +1,21 @@
+.element {
+  width: 100px;
+  height: 100px;
+  background: black; }
+  .element p {
+    color: #333; }
+
+.link {
+  color: #333;
+  font-size: 12px; }
+
+.heading {
+  font-family: Arial; }
+  .heading a {
+    color: "blue"; }
+    .heading a:visited {
+      color: "red"; }
+    .heading a:hover {
+      color: "pink"; }
+    .heading a:active {
+      color: "purple"; }

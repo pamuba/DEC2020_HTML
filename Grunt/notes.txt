@@ -10,6 +10,16 @@ npm i -D grunt
 //concatenating css and js files
 npm install grunt-contrib-concat --save-dev
 
+//minify css
+grunt-sass
+node-sass
+
+//js uglify
+grunt-contrib-uglify
+
+// css minify
+grunt-contrib-cssmin
+
 
 
 -configure the tasks
