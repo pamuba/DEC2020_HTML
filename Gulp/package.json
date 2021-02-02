@@ -1,0 +1,44 @@
+{
+  "name": "Gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
+    "browserify": "^17.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-uglify": "^3.0.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "jshint": "^2.12.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "browserslist": [
+    "chrome >= 45",
+    "defaults",
+    "IE 11",
+    "not IE_Mob 11",
+    "maintained node versions"
+  ]
+}

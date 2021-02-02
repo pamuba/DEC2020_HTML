@@ -10,8 +10,9 @@ var color = d3.scaleQuantize().range(
 
 //Projection function
 var projection = d3.geoAlbersUsa()
-                    .scale([chart_width * 5])
-                    .translate([chart_width/2,chart_height/2]);
+                    .translate([0,0]);
+                    // .scale([chart_width * 5])
+                    // .translate([0,0]);
 var path = d3.geoPath(projection);
             
 
@@ -20,6 +21,58 @@ var svg             =   d3.select("#chart")
     .append("svg")
     .attr("width", chart_width)
     .attr("height", chart_height);
+
+//drag --> works only with groups
+var zoom_map = d3.zoom().on('zoom', function(){
+    // console.log(d3.event);
+
+    // var offset = projection.translate();
+    var offset = [
+        d3.event.transform.x,
+        d3.event.transform.y,
+    ];
+
+    var scale = d3.event.transform.k * 2000; //default scale of the zoom level
+
+    projection.translate(offset)
+        .scale(scale);
+
+    // offset[0] += d3.event.dx;
+    // offset[1] += d3.event.dy;
+
+    // projection.translate(offset);
+
+    svg.selectAll('path')
+        .transition()
+        .attr('d', path)
+
+    svg.selectAll('circle')
+        .transition()
+        .attr('cx', function(d){
+            return projection([d.lon, d.lat])[0];
+        })
+        .attr('cy', function(d){
+            return projection([d.lon, d.lat])[1];
+        })
+});
+
+
+var map = svg.append("g")
+            .attr('id','map')
+            .call(zoom_map)
+            .call(
+                zoom_map.transform,
+                d3.zoomIdentity
+                    .translate(chart_width/2, chart_height/2)
+                    .scale(1)
+            )   
+
+map.append('rect')
+    .attr('x',0)
+    .attr('y',0)
+    .attr('width', chart_width)
+    .attr('height', chart_height)
+    .attr('opacity',0)
 
 
 //Load the data
@@ -43,7 +96,7 @@ d3.json('us.json').then(function(us_data){
         });
     });
     // console.log(us_data);
-    svg.selectAll('path')
+    map.selectAll('path')
         .data(us_data.features)
         .enter()
         .append('path')
@@ -62,7 +115,7 @@ d3.json('us.json').then(function(us_data){
 
 function draw_cities(){
     d3.json('us-cities.json').then(function(city_data){
-        svg.selectAll("circle")
+        map.selectAll("circle")
         .data(city_data)
         .enter()
         .append("circle")

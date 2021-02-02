@@ -1,0 +1,4 @@
+nodemon
+watch features-
+
+js  ->  uglify .min.js
