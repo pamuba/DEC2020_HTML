@@ -29,3 +29,19 @@ Discuss: ng-template, ng-container
 9. Compnent Interaction
 10. pipes $123.45678
 11. Services
+
+a class wth a narrow,well defined purpose
+
+Angular services are singleton objects that get 
+instantiated only once during the lifetime of an application.
+
+DRY
+Single responsibility
+
+DI
+
+11. http -- Observables - rxjs
+
+HttpModule
+>4---HttpClientModule
+
