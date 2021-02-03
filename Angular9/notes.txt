@@ -1,0 +1,12 @@
+template(HTML)+class(ts)+metadata(decorators)
+
+Attributes and values are not same
+Attributes - HTML
+Properties - DOM
+
+attrs initializes the DOM Properties
+attrs are immutable
+DOM properties  can change
+
+interpolation works well with strings
+boolean ---> property binding

@@ -1,0 +1,31 @@
+1. Component
+2. Interpolation
+3. Property binding ???
+
+With property binding, you can do things such as toggle button 
+functionality, set paths programmatically, and share values 
+between components.
+
+set values for proprties of HTML
+
+
+Property binding in Angular helps you set values for properties of HTML 
+elements or directives.
+and html attribuate and dom attribuate is not same
+
+4. Class binding
+5. Style binding
+6. Event binding
+7. Template Reference Variable
+8. Structural directives
+can add or remove HTML elements
+
+*nfIf
+*ngSwitch
+*ngFor
+
+Discuss: ng-template, ng-container
+
+9. Compnent Interaction
+10. pipes $123.45678
+11. Services
