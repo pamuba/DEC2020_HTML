@@ -20,6 +20,8 @@ import { PipesComponent } from './pipes/pipes.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { EmployeeService } from './employee.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DepartmentDetailComponent } from './department-detail/department-detail.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { EmployeeService } from './employee.service';
     EmployeeListComponent,
     EmployeeDetailsComponent,
     routingComponents,
+    PageNotFoundComponent,
+    DepartmentDetailComponent,
   ],
   imports: [
     BrowserModule,
