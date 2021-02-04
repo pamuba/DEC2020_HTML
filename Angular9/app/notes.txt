@@ -47,4 +47,11 @@ HttpModule
 
 12. Routing
 
+13. forms
+a. TDF-template driven forms: heavy component templates, difficult to test
+b. Reaactive forms:Heavy component class, easy to test
+
+
+
+
 

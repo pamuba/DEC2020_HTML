@@ -1,5 +1,5 @@
-<div style="text-align: center;">
-  <h2>Root Component</h2>
+<!-- <div style="text-align: center;"> -->
+  <!-- <h2>Root Component</h2> -->
   <!-- <app-test></app-test> -->
   <!-- <app-interpolation></app-interpolation> -->
   <!-- <app-property-binding></app-property-binding> -->
@@ -15,9 +15,66 @@
   <!-- <app-employee-list></app-employee-list> -->
   <!-- <app-employee-details></app-employee-details> -->
   <!-- {{message}} -->
+<!-- </div> -->
+<!-- <nav> -->
+  <!-- <a routerLink="/departments">Departments</a>
+  <a routerLink="/employees">Employees</a> -->
+<!-- </nav> -->
+<!-- <router-outlet></router-outlet> -->
+
+<div class="container-fluid">
+  <h1>Enrollment Form</h1>
+  <!-- ngForm -->
+  <form #userForm="ngForm"> 
+
+    {{userForm.value | json}}
+    <hr/>
+    {{userModel | json}}
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" [(ngModel)]="userModel.name"  name="userName"/>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" class="form-control" [(ngModel)]="userModel.email" name="email"/>
+    </div>
+
+    <div class="form-group">
+      <label>Phone</label>
+      <input type="tel" class="form-control" [(ngModel)]="userModel.phone"  name="phone"/>
+    </div>
+
+    <div class="form-group">
+      <select class="custom-select" [(ngModel)]="userModel.topic" name="topic">
+        <option selected>I am interested in</option>
+        <option *ngFor="let topic of topics">{{topic}}</option>
+      </select>
+    </div>
+
+
+    <div class="mb-3">
+      <label for="">Time Preferences</label>
+      <div class="form-check">
+        <input [(ngModel)]="userModel.timePreference" class="form-check-input" type="radio" name="timePreference" value="morning">
+        <label class="form-check-label">Morning(9AM - 12PM)</label>
+      </div>
+      <div class="form-check">
+        <input [(ngModel)]="userModel.timePreference" class="form-check-input" type="radio" name="timePreference" value="evening">
+        <label class="form-check-label">Evening(5PM - 08PM)</label>
+      </div>
+    </div>
+
+    <div class="form-check mb-3">
+      <input class="form-check-input"  [(ngModel)]="userModel.subscribe"  name="subscribe" type="checkbox">
+      <label class="form-check-label">
+        Send me promotional offers
+      </label>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit Form</button>
+
+  </form>
+  
 </div>
-<nav>
-  <a routerLink="/departments">Departments</a>
-  <a routerLink="/employees">Employees</a>
-</nav>
-<router-outlet></router-outlet>
