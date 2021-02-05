@@ -15,4 +15,5 @@ export class AppComponent {
 
   userModel = new User("John","joh@getMaxListeners.com", 
   12345678, '', 'morning', true);
+  
 }

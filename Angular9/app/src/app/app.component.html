@@ -26,10 +26,12 @@
   <h1>Enrollment Form</h1>
   <!-- ngForm -->
   <form #userForm="ngForm"> 
-
+<!-- ngModel  name -->
     {{userForm.value | json}}
+
     <hr/>
     {{userModel | json}}
+    <!-- 2 way data binding -->
 
     <div class="form-group">
       <label>Name</label>
