@@ -1,1 +1,21 @@
-<p>video-detail works!</p>
+<div>
+    <div>
+        <iframe height="300" width="100%" [src]="video.url | safe"></iframe>
+    </div>
+    <form>
+        <div *ngIf="editTitle" class="form-group">
+            <input type="input" class="form-control" name="title" required placeholder="title"
+            [(ngModel)]="video.title">
+        </div>
+        <h3  *ngIf="!editTitle" (click)="onTitleClick()"> {{video.title}}</h3>
+        <div class="form-group">
+            <input type="input" class="form-control" name="url" required placeholder="url"
+            [(ngModel)]="video.url">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" rows="5" name="desc" [(ngModel)]="video.description"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary">Update</button>
+        <button type="button" class="btn btn-danger">Delete</button>
+    </form>
+</div>
