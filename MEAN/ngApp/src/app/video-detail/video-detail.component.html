@@ -15,7 +15,7 @@
         <div class="form-group">
             <textarea class="form-control" rows="5" name="desc" [(ngModel)]="video.description"></textarea>
         </div>
-        <button type="button" class="btn btn-primary">Update</button>
-        <button type="button" class="btn btn-danger">Delete</button>
+        <button type="button" (click)="updateVideo()" class="btn btn-primary">Update</button>
+        <button type="button" (click)="deleteVideo()" class="btn btn-danger">Delete</button>
     </form>
 </div>
