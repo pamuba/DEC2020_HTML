@@ -11,6 +11,8 @@ export class VideoCenterComponent implements OnInit {
 
   public selectedVideo:Video;
 
+  public hidenewVideo:boolean = true;
+
   videos:Video[]=[]
   // videos:any=[]
   constructor(private _videoService:VideoService) { }
@@ -25,7 +27,19 @@ export class VideoCenterComponent implements OnInit {
   }
   onSelectVideo(video:any){
     this.selectedVideo = video;
+    this.hidenewVideo = true;
     console.log(this.selectedVideo)
+  }
+  onSubmitAddVideo(video:Video){
+    this._videoService.addVideo(video)
+        .subscribe(resNewVideo=>{
+          this.videos.push(resNewVideo);
+          this.hidenewVideo = true;
+          this.selectedVideo = resNewVideo;
+        })
+  }
+  newVideo(){
+    this.hidenewVideo = false;
   }
 
 }
