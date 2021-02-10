@@ -1,0 +1,5 @@
+1. Modifying headers
+(Authentication)
+2. Handling http errors in a single place
+3. Tracing/Profiling requests
+
