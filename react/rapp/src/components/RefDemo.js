@@ -4,6 +4,7 @@ class RefDemo extends Component {
     constructor(props) {
         super(props)
         this.inputRef = React.createRef();
+        
         this.cBRef = null;
         this.setCBR = (element) => {
             this.cBRef = element
@@ -14,7 +15,7 @@ class RefDemo extends Component {
             this.cBRef.focus();
         }
         // this.inputRef.current.focus()
-        // console.log(this.inputRef)
+        console.log(this.inputRef)
     }
     handler = () => {
         alert(this.inputRef.current.value)

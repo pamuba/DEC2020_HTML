@@ -8,7 +8,7 @@ Life Cycle Stages
 1. Mounting - instance created and inserted into the DOM
 2. Updating - re rendering of the component(change in state or props)
 3. Unmonting - component is removed from DOM
-4. Error Handling - errors during rendering/ erros in the ctr od child components
+4. Error Handling - errors during rendering/ erros in the ctr of child components
  
 Mounting - ctr, static getDerivedStateFromProps, render, componentDidMount
 
@@ -51,3 +51,6 @@ honda
 tesla
 
 
+HOC-Higher Order Components
+
+Comp - > HOC - > Modified Comp
