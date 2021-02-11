@@ -54,3 +54,5 @@ tesla
 HOC-Higher Order Components
 
 Comp - > HOC - > Modified Comp
+
+render props = sharing code using prop hose value is a function
