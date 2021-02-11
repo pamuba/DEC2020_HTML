@@ -4,6 +4,18 @@ import First from './components/First'
 import Classfirst from './components/Classfirst';
 import StateDemo1 from './components/StateDemo1';
 import Counter from './components/Counter';
+import FunctionClick from './components/FunctionClick';
+import EventBind from './components/EventBind';
+import ParentComponent from './components/ParentComponent';
+import UserGreeting from './components/UserGreeting';
+import Item from './components/Item';
+
+import Stylesheet from './components/Stylesheet';
+import Inline from './components/Inline';
+import Form from './components/Form';
+import LifeCycleA from './components/LifeCycleA';
+import Fragments from './components/Fragments';
+import ParentComponet from './components/ParentComponet'
 
 function App() {
   return (
@@ -24,7 +36,23 @@ function App() {
 
      {/* <StateDemo1></StateDemo1> */}
 
-     <Counter></Counter>
+     {/* <Counter></Counter> */}
+     {/* <FunctionClick></FunctionClick> */}
+
+     {/* <EventBind></EventBind> */}
+
+     {/* <ParentComponent></ParentComponent> */}
+
+     {/* <UserGreeting></UserGreeting> */}
+     {/* <Item></Item> */}
+
+     {/* <Stylesheet primary={true}></Stylesheet>
+     <Inline></Inline> */}
+
+     {/* <Form></Form> */}
+     {/* <LifeCycleA></LifeCycleA> */}
+     {/* <Fragments></Fragments> */}
+     <ParentComponet></ParentComponet>
     </div>
   );
 }

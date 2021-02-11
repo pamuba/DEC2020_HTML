@@ -1,0 +1,40 @@
+Conditional Rendering
+1. if/else
+2. element variables
+3. Ternary operator
+4. Short Circuit operator
+
+Life Cycle Stages
+1. Mounting - instance created and inserted into the DOM
+2. Updating - re rendering of the component(change in state or props)
+3. Unmonting - component is removed from DOM
+4. Error Handling - errors during rendering/ erros in the ctr od child components
+ 
+Mounting - ctr, static getDerivedStateFromProps, render, componentDidMount
+
+Updating - static getDerivedStateFromProps, shouldComponentUpdate, render,
+            getSnapshotBeforeUpdate , componentDidUpdate
+
+Unmonting - componentWillUnmount
+
+Error Handling - static getDerivedStateFromError, componentDidCatch
+
+SC:
+
+primitive types:
+a , b have the same val and of the same types
+
+complex types:
+a,b the same references to the same exact object
+
+a = ""
+b = ""
+c = a
+
+a===b
+
+a===c
+
+
+SC of prevState with currentState
+SC of prevProps with currentProps
