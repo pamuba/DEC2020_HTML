@@ -19,6 +19,10 @@ Unmonting - componentWillUnmount
 
 Error Handling - static getDerivedStateFromError, componentDidCatch
 
+class Component
+
+ERROR BOUNDARY:Catches the error and creats a fallback UI
+
 SC:
 
 primitive types:
@@ -38,3 +42,12 @@ a===c
 
 SC of prevState with currentState
 SC of prevProps with currentProps
+
+
+tesla
+tesla
+tesla
+honda
+tesla
+
+

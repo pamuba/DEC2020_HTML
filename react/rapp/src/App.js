@@ -16,6 +16,10 @@ import Form from './components/Form';
 import LifeCycleA from './components/LifeCycleA';
 import Fragments from './components/Fragments';
 import ParentComponet from './components/ParentComponet'
+import RefDemo from './components/RefDemo';
+import PortalDemo from './components/PortalDemo';
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
   return (
@@ -52,7 +56,17 @@ function App() {
      {/* <Form></Form> */}
      {/* <LifeCycleA></LifeCycleA> */}
      {/* <Fragments></Fragments> */}
-     <ParentComponet></ParentComponet>
+     {/* <ParentComponet></ParentComponet> */}
+     {/* <RefDemo></RefDemo> */}
+
+     {/* <PortalDemo></PortalDemo> */}
+
+     
+    <ErrorBoundary>
+     <Hero heroName="Batman"></Hero>
+     <Hero heroName="Superman"></Hero>
+     <Hero heroName="Joker"></Hero>
+    </ErrorBoundary>
     </div>
   );
 }
