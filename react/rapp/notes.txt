@@ -56,3 +56,36 @@ HOC-Higher Order Components
 Comp - > HOC - > Modified Comp
 
 render props = sharing code using prop hose value is a function
+
+Context
+1. Create the Context
+2. provide a context value
+3. Consume the context value
+
+Hooks:
+new feature of version 16.8
+
+they allow us to use react features without having to create class components
+
+eg. state of a component
+
+1. this 
+2. reuse stateful component logic
+   HOC, render props
+   simple using Hooks
+3. data ftching code (componentDidMount, componentDidUpdate) 
+   event listeners(componentDidMount, componentWillUnmount)
+   have the logic in a single place
+
+   useEffect: it lets us perform side effecs in fn components
+
+   componentDidMount(){
+       document.title = ""
+       this.interval = setInterval(1000)
+   }
+   componentDidUpdate(){
+       document.title = ""
+   }
+   componentWillUnmount(){
+       clearInterval(this.interval)
+   }

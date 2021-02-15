@@ -26,7 +26,17 @@ import User from './components/User';
 import HCounter from './components/HCounter';
 import { CCounter } from './components/CCounter';
 import Counter1 from './components/Counter1';
-
+import ComponentC from './components/ComponentC';
+// import {UserProvider} from './components/userContext';
+import PostList from './components/PostList';
+import PostForm from './components/PostForm';
+import ComponentF from './components/ComponentF';
+import {UserProvider} from './components/userContext'
+import ClassCounter from './components/ClassCounter';
+import HooksCounterThree from './components/HooksCounterThree';
+import ClassCounterOne from './components/ClassCounterOne'
+import HooksCounterOne from './components/HooksCounterOne'
+import HookCounter from './components/HooksCounter';
 function App() {
   return (
     <div className="App">
@@ -78,8 +88,27 @@ function App() {
     <HCounter></HCounter>
     {/* <User name={()=>'John'} /> */}
     {/* <User name={(isLoggedIn)=>isLoggedIn ? 'John': 'Guest'} /> */} 
-    <Counter1 render={(count, incrementCount) => <CCounter count={count} incrementCount={incrementCount} />} />
-    
+    {/* <Counter1 render={(count, incrementCount) => <CCounter count={count} incrementCount={incrementCount} />} /> */}
+    {/* <UserProvider value="John">
+      <ComponentC></ComponentC>
+    </UserProvider> */}
+
+    {/* <PostList></PostList> */}
+    {/* <PostForm></PostForm> */}
+{/* 
+    <UserProvider value="Conext Value">
+      <ComponentC></ComponentC>
+    </UserProvider> */}
+
+    {/* <PostList></PostList> */}
+
+    {/* <PostForm></PostForm> */}
+    {/* <ClassCounter></ClassCounter> */}
+    {/* <HookCounter></HookCounter> */}
+    {/* <HooksCounterTwo></HooksCounterTwo> */}
+    {/* <HooksCounterThree></HooksCounterThree> */}
+    <ClassCounterOne></ClassCounterOne>
+    {/* <HooksCounterOne></HooksCounterOne> */}
     </div>
   );
 }

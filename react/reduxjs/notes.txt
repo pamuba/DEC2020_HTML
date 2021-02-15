@@ -1,0 +1,5 @@
+1. holds the application state
+2. allows access to state via getState()
+3. allows state to be updated vis dispatch(action)
+4. registers listeners vis subscribe(listeners)
+5. unregistering
