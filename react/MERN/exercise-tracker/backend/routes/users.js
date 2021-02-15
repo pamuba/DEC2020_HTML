@@ -12,7 +12,7 @@ router.route('/').get((req, res) => {
 //localhost:5000/users/add
 router.route('/add').post((req, res) => {
   const username = req.body.username;
-  console.log("Inside")
+  
   const newUser = new User({username});
 
   newUser.save()
