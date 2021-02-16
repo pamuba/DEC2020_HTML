@@ -1,0 +1,11 @@
+firestore:no sql database, cloud based, 
+android, ios, web applications, native SDK's
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCDEFc96u-EsY73682YOc3p5aWYU0I3Src",
+  authDomain: "angularcrud4.firebaseapp.com",
+  projectId: "angularcrud4",
+  storageBucket: "angularcrud4.appspot.com",
+  messagingSenderId: "107968389146",
+  appId: "1:107968389146:web:49c39e170aee8f8771f1a3"
+};

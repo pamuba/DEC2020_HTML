@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css"
+import axios from 'axios'
 
 class CreateExercises extends Component {
     constructor(props) {
@@ -25,10 +26,16 @@ class CreateExercises extends Component {
 
     //lifecycle hook, just before render
     componentDidMount(){
-        this.setState({
-            users: ['user1', 'user2'],
-            username:'user1'
+        axios.get('http://localhost:5000/users/')
+        .then( res => {
+            if(res.data.length > 0){
+                this.setState({
+                    users: res.data.map(user => user.username),
+                    username: res.data[0].username
+                })
+            }
         })
+       
     }
 
     onChangeUsername(e){
@@ -67,10 +74,10 @@ class CreateExercises extends Component {
           }
           console.log(exercise)
 
-        // axios.post('http://localhost:5000/exercises/add', exercise)
-        // .then(res => console.log(res.data))
+        axios.post('http://localhost:5000/exercises/add', exercise)
+        .then(res => console.log(res.data))
 
-        //   window.location = '/'
+        window.location = '/'
       }
     
 
