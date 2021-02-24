@@ -1,0 +1,25 @@
+{
+  "name": "mocha_chai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": ""
+  },
+  "scripts": {
+    "test": "cross-env NODE_ENV=development ./mocha './test/*.test.js'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "chai-as-promised": "^7.1.1",
+    "rewire": "^5.0.0",
+    "sinon": "^9.2.4",
+    "sinon-chai": "^3.5.0"
+  }
+}
