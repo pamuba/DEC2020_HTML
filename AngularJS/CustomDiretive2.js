@@ -16,7 +16,7 @@ mainApp.directive('student', function(){
 
     //compile 
     directive.compile = function(element, attributes){
-        element.css("border", "1px solid #cccccc");
+        element.css("border", "3px solid #cccccc");
         //Link post
         var linkFunction = function($scope, element, attributes){
             // element.html('Student: <b>'+$scope.student.name+'</b>, Roll No:<b>'+$scope.student.rollno+'</b>')

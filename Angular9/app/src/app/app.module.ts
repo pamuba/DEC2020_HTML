@@ -22,6 +22,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { EmployeeService } from './employee.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DepartmentDetailComponent } from './department-detail/department-detail.component';
+import { TrackComponent } from './track/track.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { DepartmentDetailComponent } from './department-detail/department-detail
     routingComponents,
     PageNotFoundComponent,
     DepartmentDetailComponent,
+    TrackComponent,
   ],
   imports: [
     BrowserModule,

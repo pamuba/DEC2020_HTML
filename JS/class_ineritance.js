@@ -27,10 +27,10 @@ class Rabbit extends Animal{
     }
     //overriding
     stop(){
-        // this.speed = 0;
-        // console.log(`${this.name} stands still(from the rabbit class)`)
+        this.speed = 0;
+        console.log(`${this.name} stands still(from the rabbit class)`)
         // super.stop();
-        setTimeout(()=>super.stop(), 1000); //no super, gets from outer fn
+        // setTimeout(()=>super.stop(), 1000); //no super, gets from outer fn
         // setTimeout(function(){super.stop()},1000);
     }
 }

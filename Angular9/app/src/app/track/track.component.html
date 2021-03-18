@@ -1,0 +1,17 @@
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of employees; trackBy:trackById">
+            <td>{{ emp.id}}</td>
+            <td>{{ emp.name}}</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<button (click) = "getEmployees()">Add Employee</button>
+

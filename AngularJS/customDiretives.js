@@ -5,7 +5,7 @@ app.controller('emp', function($scope){
 
 app.directive("myInfoMsg", function(){
     return {
-        // template: ""
+        // templateUrl: "my-info-msg.html"
         templateUrl : "my-info-msg.html"
     }
 })
