@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const foo = { id: 1, height: '200px', width: '100px' };
+        const bar = { id: 2, height: '250px', width: '200px' };
+        // console.log(foo)
+        // console.log(bar)
+        console.log({ foo, bar });
+        console.warn('console.warn')
+        console.error('console.error')
+        console.info('console.info')
+
+        console.group('Shopping Cart');
+        console.log('user: John Doe');
+        // Group Start
+        console.group('Shopping item');
+        console.log('Name: JS Book 1');
+        console.log('Author: Unknown author');
+        console.log('ISBN: 048665088X');
+        console.groupEnd();
+        // Group strat
+        console.group('Shopping item');
+        console.log('Name: JS Book 2');
+        console.log('Author: Unknown author');
+        console.log('ISBN: 048665087X');
+        console.groupEnd();
+        console.groupEnd();
+
+        console.table({foo, bar})
+
+
+        console.trace();
+
+
+
+        console.time("timer1");
+
+        for (let i = 0; i < 100000; i++) {
+        // some code
+        }
+        console.timeEnd("timer1");
+
+
+
+
+        console.time("timer2");
+
+        for (let i = 0; i < 100000; i++) {
+        // some code
+        }
+        console.timeEnd("timer2");
+
+
+        console.clear();
+
+
+        console.dir(foo)
+    </script>
+</body>
+</html>

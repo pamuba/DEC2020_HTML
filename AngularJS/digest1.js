@@ -15,7 +15,7 @@ var btnClick = function(){
 
     $scope.s =  Number($scope.a) + Number($scope.b);
     //Invoking the digest process from outside the angular context
-    $scope.$apply();
+    // $scope.$apply();
     
     // $scope.$apply(function(){
     //     $scope.s = Number($scope.a) + Number($scope.b);

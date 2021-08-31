@@ -13,6 +13,7 @@ var browserify = require('browserify');
 var imagemin = require('gulp-imagemin');
 
 //gulp -g, in case of error
+//gulp --tasks lists all tasks
 // gulp.task('task_jshint', function(done){
 //     gulp.src('js/main.js')
 //         .pipe(jshint())
@@ -22,7 +23,7 @@ var imagemin = require('gulp-imagemin');
 
 
 //default task
-// gulp.task('task_jshint', function(done){
+// gulp.task('default', function(done){
 //     gulp.src('js/main.js')
 //         .pipe(jshint())
 //         .pipe(jshint.reporter('default'))
@@ -47,14 +48,14 @@ var imagemin = require('gulp-imagemin');
 
 
 // //named task in version 4
-// // exports.task_jshint = task_jshint;
+// exports.task_jshint = task_jshint;
 
 // //create default task in ver 4
-// // exports.default = task_jshint;
+// exports.default = task_jshint;
 
 // //export more then one task
-// //  exports.default = gulp.series(task_jshint, task_jshint1)
-// //  exports.default = gulp.parallel(task_jshint, task_jshint1)
+//  exports.default = gulp.series(task_jshint, task_jshint1)
+//  exports.default = gulp.parallel(task_jshint, task_jshint1)
 //  exports.both = gulp.series(task_jshint, task_jshint1)
 
 //gulp minify and rename css files
@@ -74,22 +75,22 @@ var imagemin = require('gulp-imagemin');
 // })
 
 
-var styleSRC = './src/scss/style.scss';
-var styleDEST = './dist/css';
-// //sass complie + minify + rename
-// //gulp-sass 
+// var styleSRC = './src/scss/style.scss';
+// var styleDEST = './dist/css';
+// // // //sass complie + minify + rename
+// // // //gulp-sass 
 
-gulp.task('styles', function(done){
-    gulp.src(styleSRC)
-        .pipe(sass({
-            errLogToConsole:false, //<= look into this
-            outputStyle:'compressed'
-        }))
-        // .pipe(cleanCSS())
-        .pipe(rename({suffix:'.min'}))
-        .pipe(gulp.dest(styleDEST));
-    done()
-})
+// gulp.task('styles', function(done){
+//     gulp.src(styleSRC)
+//         .pipe(sass({
+//             // errLogToConsole:false, //<= look into this
+//             outputStyle:'compressed'
+//         }))
+//         // .pipe(cleanCSS())
+//         .pipe(rename({suffix:'.min'}))
+//         .pipe(gulp.dest(styleDEST));
+//     done()
+// })
 
 
 
@@ -104,7 +105,7 @@ gulp.task('styles', function(done){
 //     gulp.src(styleSRC)
 //         .pipe(sourcemaps.init())
 //         .pipe(sass({
-//             errLogToConsole:false, //<= look into this
+//             // errLogToConsole:false, //<= look into this
 //             outputStyle:'compressed'
 //         }))
 //         .on('error', console.error.bind(console))
@@ -120,7 +121,7 @@ gulp.task('styles', function(done){
 // })
 
 var jsSRC = 'script.js'
-var jsFolder = './src/js/'
+// var jsFolder = './src/js/'
 var jsDEST = './dist/js/'
 
 var jsFiles = [jsSRC]
@@ -130,16 +131,16 @@ gulp.task('js', function(done){
     //     .pipe(gulp.dest(jsDEST));
     // done()
 
-    //browserify
-    //transform babelify
-    //bundle
-    //source
-    //rename
-    //buffer
-    //init sourcemaps
-    //uglify
-    //write sourcemaps
-    //dist
+//     //browserify
+//     //transform babelify
+//     //bundle
+//     //source
+//     //rename
+//     //buffer
+//     //init sourcemaps
+//     //uglify
+//     //write sourcemaps
+//     //dist
 
     jsFiles.map(function(entry){
         return browserify({
@@ -159,25 +160,25 @@ gulp.task('js', function(done){
 })
 
 
-var imgSRC = './src/images/*'
-var imgDEST = './dist/images/'
+// var imgSRC = './src/images/*'
+// var imgDEST = './dist/images/'
 
-gulp.task('image', function(done){
-    gulp.src(imgSRC)
-        .pipe(imagemin())
-        .pipe(gulp.dest(imgDEST));
-        done();
-})
+// gulp.task('image', function(done){
+//     gulp.src(imgSRC)
+//         .pipe(imagemin())
+//         .pipe(gulp.dest(imgDEST));
+//         done();
+// })
 
-var styleWatch = './src/scss/**/*.scss';
-var jsWatch = './src/js/**/*.js';
+// var styleWatch = './src/scss/**/*.scss';
+// var jsWatch = './src/js/**/*.js';
 
-gulp.task('watch', function(){
-    gulp.watch(styleWatch, gulp.series('styles')),
-    gulp.watch(jsWatch, gulp.series('js'))
-    // return
-})
+// gulp.task('watch', function(){
+//     gulp.watch(styleWatch, gulp.series('styles')),
+//     gulp.watch(jsWatch, gulp.series('js'))
+//     // return
+// })
 
-gulp.task('default', gulp.parallel('styles', 'js'), function(){
-    ///
-})
+// gulp.task('default', gulp.parallel('styles', 'js'), function(){
+//     ///
+// })
